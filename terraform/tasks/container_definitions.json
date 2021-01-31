@@ -1,0 +1,27 @@
+[
+    {
+        "name": "lighthouse-ci-server",
+        "image": "patrickhulce/lhci-server",
+        "essential": true,
+        "portMappings": [
+            {
+                "containerPort": 9001,
+                "hostPort": 9001
+            }
+        ],
+        "mountPoints": [
+            {
+                "containerPath": "/data",
+                "sourceVolume": "lighthouse-ci-server"
+            }
+        ],
+        "logConfiguration": {
+          "logDriver": "awslogs",
+          "options": {
+            "awslogs-group": "lighthouse-ci-server",
+            "awslogs-region": "ap-northeast-1",
+            "awslogs-stream-prefix": "lighthouse-ci-server"
+          }
+        }
+    }
+]
