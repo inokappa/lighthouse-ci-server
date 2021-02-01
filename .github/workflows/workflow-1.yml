@@ -1,0 +1,14 @@
+name: "workflow-1"
+
+on:
+  push:
+    branches:
+      - '**'
+
+jobs:
+  workflow:
+    runs-on: ubuntu-latest
+    steps:
+      - name: echo workflow-1
+        run: |
+          echo "workflow-1"
