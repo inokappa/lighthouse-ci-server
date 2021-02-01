@@ -24,7 +24,7 @@ resource "aws_security_group_rule" "allow-http-for-alb" {
   protocol          = "tcp"
   from_port         = 80
   to_port           = 80
-  cidr_blocks       = ["27.81.60.150/32"]
+  cidr_blocks       = ["x.x.x.x/32"]
   description       = "lighthouse-ci-server allow http for alb."
 }
  
